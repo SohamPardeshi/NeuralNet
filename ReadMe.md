@@ -7,7 +7,7 @@ Begin by specifying the size of each input, hidden, and output layer in the Netw
 ```java
 int   inputSize   = 28 * 28;		 // Declare an input size (e.g. for a 28x28 pixel MNIST image)
 int[] hiddenSizes = {40, 20, 15};	 // Specify the sizes of each hidden layer (3 layers)
-int   outputSize  = 10;				 // Choose the number of output classifications
+int   outputSize  = 10;			 // Choose the number of output classifications
 
 Network net = new Network(inputSize, hiddenSizes, outputSize);
 ```
@@ -18,6 +18,7 @@ for(int i = 0; i < trainingSet.size(); i++){
 	double[] input = trainingSet.getTest(i);
 	int label = trainingSet.getLabel(i);
 	
+	// Creates a 
 	double[] expected = NNetworkUtils.oneHotArray(outputSize, label);
 	double learningRate = 0.1;
 	
@@ -38,7 +39,7 @@ for(int i = 0; i < testSet.size(); i++){
 	
 	int guess = NNetworkUtils.softmax(output);
 	if(guess == label) correct++;
-	
 }
+
 System.out.println("Classified " + correct + " out of " + testSet.size());
 ```
