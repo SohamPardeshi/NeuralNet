@@ -1,9 +1,9 @@
-package examples;
+package examples.mnist;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-public class MNIST {
+public class MNISTParser {
 	// Size of each image.
 	private int width;
 	private int height;
@@ -18,7 +18,7 @@ public class MNIST {
 	 * @param imagePath
 	 * @param labelPath
 	 */
-	public MNIST(String imagePath, String labelPath) {
+	public MNISTParser(String imagePath, String labelPath) {
 		try {
 			System.out.println("Loading MNIST data.");
 

@@ -1,4 +1,4 @@
-package examples;
+package examples.mnist;
 import java.text.DecimalFormat;
 
 import nnetwork.NNetworkUtils;
@@ -13,8 +13,8 @@ public class NeuralMNIST {
 	static DecimalFormat df = new DecimalFormat("##.##%");
 
 	public static void main(String[] args) throws InterruptedException {
-		MNIST train = new MNIST("train-images.idx3-ubyte", "train-labels.idx1-ubyte");
-		MNIST test = new MNIST("t10k-images.idx3-ubyte", "t10k-labels.idx1-ubyte");
+		MNISTParser train = new MNISTParser("train-images.idx3-ubyte", "train-labels.idx1-ubyte");
+		MNISTParser test = new MNISTParser("t10k-images.idx3-ubyte", "t10k-labels.idx1-ubyte");
 
 		Network network = new Network(inputSize, hiddenSize, outputSize);
 
