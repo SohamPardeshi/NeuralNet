@@ -1,4 +1,4 @@
-# NeuralNetwork
+# NeuralNetwork 
 This is a simple feedforward neural network (with backpropagation) built from scratch using Java. It can be used to approximate many tasks, such as classifying MNIST images with ~93% accuracy or identifying generic machine data.
 
 
