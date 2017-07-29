@@ -6,7 +6,7 @@ This is a simple feedforward neural network (with backpropagation) built from sc
 Begin by specifying the size of each input, hidden, and output layer in the Network.
 ```java
 int   inputSize   = 28 * 28;		 // Declare an input size (e.g. for a 28x28 pixel MNIST image)
-int[] hiddenSizes = {40, 20, 15};	 // Specify the sizes of each hidden layer (3 layers)
+int[] hiddenSizes = {40, 20, 15};	 // Specify the sizes of each hidden layer (at least 1 layer needed)
 int   outputSize  = 10;			 // Choose the number of output classifications
 
 Network net = new Network(inputSize, hiddenSizes, outputSize);
